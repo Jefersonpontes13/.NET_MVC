@@ -1,30 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeffe\\RiderProjects\\CursoMVC\\CursoMVC\\CursoMVC.csproj": {}
+    "C:\\Users\\jeffe\\RiderProjects\\NET_MVC\\CursoMVC\\CursoMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeffe\\RiderProjects\\CursoMVC\\CursoMVC\\CursoMVC.csproj": {
+    "C:\\Users\\jeffe\\RiderProjects\\NET_MVC\\CursoMVC\\CursoMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeffe\\RiderProjects\\CursoMVC\\CursoMVC\\CursoMVC.csproj",
+        "projectUniqueName": "C:\\Users\\jeffe\\RiderProjects\\NET_MVC\\CursoMVC\\CursoMVC.csproj",
         "projectName": "CursoMVC",
-        "projectPath": "C:\\Users\\jeffe\\RiderProjects\\CursoMVC\\CursoMVC\\CursoMVC.csproj",
+        "projectPath": "C:\\Users\\jeffe\\RiderProjects\\NET_MVC\\CursoMVC\\CursoMVC.csproj",
         "packagesPath": "C:\\Users\\jeffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeffe\\RiderProjects\\CursoMVC\\CursoMVC\\obj\\",
+        "outputPath": "C:\\Users\\jeffe\\RiderProjects\\NET_MVC\\CursoMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jeffe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jeffe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -35,26 +37,22 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.6, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[5.0.7, )"
+              "version": "[3.1.15, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[3.1.15, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.5, )"
             }
           },
           "imports": [
