@@ -20,14 +20,14 @@ namespace CursoAPI.Controllers
             _context = context;
         }
 
-        // GET: api/Produtoes
+        // GET: api/Produtos
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Produto>>> GetProdutos()
         {
             return await _context.Produtos.Include("Categoria").ToListAsync();
         }
 
-        // GET: api/Produtoes/5
+        // GET: api/Produtos/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Produto>> GetProduto(int id)
         {
@@ -41,9 +41,9 @@ namespace CursoAPI.Controllers
             return produto;
         }
 
-        // PUT: api/Produtoes/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Produtos/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProduto(int id, Produto produto)
         {
@@ -52,7 +52,7 @@ namespace CursoAPI.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(produto).State = EntityState.Modified;
+            _context.SetModified(produto);
 
             try
             {
@@ -73,9 +73,9 @@ namespace CursoAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/Produtoes
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // POST: api/Produtos
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
         public async Task<ActionResult<Produto>> PostProduto(Produto produto)
         {
@@ -85,7 +85,7 @@ namespace CursoAPI.Controllers
             return CreatedAtAction("GetProduto", new { id = produto.Id }, produto);
         }
 
-        // DELETE: api/Produtoes/5
+        // DELETE: api/Produtos/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Produto>> DeleteProduto(int id)
         {

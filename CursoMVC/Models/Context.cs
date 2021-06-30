@@ -16,5 +16,10 @@ namespace CursoMVC.Models
         {
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-PT1KMTO\SQLEXPRESS;Initial Catalog=CursoMVC;Integrated Security=True");
         }
+
+        public virtual void SetModified(object entity)
+        {
+            Entry(entity).State = EntityState.Modified;
+        }
     }
 }
