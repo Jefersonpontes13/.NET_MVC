@@ -9,13 +9,11 @@ namespace CursoMVC.Models
 {
     public class Context : DbContext
     {
-        public DbSet<Categoria> Categorias { get; set; }
+        public virtual DbSet<Categoria> Categorias { get; set; }
         public DbSet<Produto> Produtos { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-PT1KMTO\SQLEXPRESS;Initial Catalog=CursoMVC;Integrated Security=True");
-        }
+        public Context(DbContextOptions<Context> options) : base(options)
+        { }
 
         public virtual void SetModified(object entity)
         {
